@@ -1,0 +1,25 @@
+@import '../../style/_var.scss';
+
+.home-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 800px;
+    height: 800px;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 60px;
+
+        width: 400px;
+        height: auto;
+        margin: 50px auto 50px auto;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+}

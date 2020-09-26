@@ -1,0 +1,79 @@
+@import '../../style/_var.scss';
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+
+    width: 800px;
+    height: auto;
+    padding: 20px 30px 20px 30px;
+    margin: 30px auto 30px auto;
+    
+    border-radius: $pageBorderRadius;
+    border: 1px solid $headerBackColor;
+    
+    color: $cardTitleColor;
+    font-family: $fontContent;
+
+    @include tablet {
+        width: 96%;
+    }
+    
+
+    h1 {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 2.5em;
+        letter-spacing: 3px;
+
+        @include tablet {
+            font-size: 2.2em;
+        }
+
+        @include smallTablet {
+            font-size: 1.9em;
+        }
+
+        @include mobile {
+            font-size: 1.5em;
+        }
+
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .photo-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 20px 0px;
+        padding: 20px 20px 20px 20px;
+        
+    
+        .photo-profil {
+            width: 200px;
+            border: 1px solid $headerBackColor;
+            border-radius: 30% 30% 30% 30%;
+        }
+    }
+
+    p {
+        
+        text-align: justify;
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .about-smile {
+        
+        font-size: 40px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+
+}
+

@@ -1,0 +1,32 @@
+{
+  "name": "react-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "parcel-bundler": "^1.12.4",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "@mui-treasury/components": "^1.9.1",
+    "formik": "^2.1.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-draggable": "^4.4.3",
+    "react-hook-form": "^6.8.3",
+    "react-select": "^3.1.0",
+    "yup": "^0.29.3"
+  }
+}

@@ -1,0 +1,36 @@
+/* COLORS */
+$backColor: rgb(230, 230, 230);
+$headerBackColor: rgb(9, 9, 85);
+$cardTitleColor: rgb(8, 8, 121);
+
+/* BORDERS */
+$pageBorderRadius: 120px 60px 120px 60px;
+$cardBorderRadius: 100px 40px 60px 60px;
+$cardShadow: 3px 3px 10px 1px black;
+
+/* FONTS */
+$fontContent: 'Asap', sans-serif;
+$fontTitle: 'Amatic SC', cursive;
+
+/* MEDIA QUERIES */
+$tablet: 900px;
+$smallTablet: 600px;
+$mobile: 450px;
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin smallTablet {
+    @media (max-width: #{$smallTablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}

@@ -1,0 +1,113 @@
+@import '../../style/_var.scss';
+
+.portfolio-section {
+    display: grid;
+    grid-template-areas: 'title title'
+                            'port-1 port-2'
+                            'port-3 port-4';
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center;
+    justify-items: center; 
+
+    width: 800px;
+    height: 800px;
+    margin: 30px auto 30px auto;
+    
+    color: $cardTitleColor;
+    font-family: $fontContent;
+
+    @include tablet {
+        grid-template-areas: 'title'
+                            'port-1'
+                            'port-2'
+                            'port-3'
+                            'port-4';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 60px;
+
+        width: 400px;
+        height: auto;
+        margin: 50px auto 50px auto;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 2.2em;
+        letter-spacing: 3px;
+        grid-area: title;
+
+        @include tablet {
+            font-size: 2em;
+        }
+
+        @include smallTablet {
+            font-size: 1.7em;
+        }
+
+        @include mobile {
+            font-size: 1.5em;
+            margin-bottom: 0;
+        }
+
+    }
+
+
+    .port {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 300px;
+        height: 300px;
+        margin-bottom: 15px;
+        align-content: center;
+
+        text-align: justify;
+        font-size: 1.1em;
+        
+        border-radius: $pageBorderRadius;
+        border: 1px solid $headerBackColor;
+        overflow: hidden;
+
+        img {
+            width: 300px;
+            height: 200px;
+            border-bottom: 1px solid $headerBackColor;
+        }
+
+
+        p {
+            margin: 15px 10px 10px 10px;
+        }
+
+    }
+
+    .port:hover {
+        box-shadow: 5px 5px 15px #858484;
+    }
+
+    .port-1 {
+        grid-area: port-1;
+    }
+
+    .port-2 {
+        grid-area: port-2;
+    }
+
+    .port-3 {
+        grid-area: port-3;
+    }
+
+    .port-4 {
+        grid-area: port-4;
+        justify-content: center;
+    }
+}

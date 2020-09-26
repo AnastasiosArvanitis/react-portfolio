@@ -1,0 +1,161 @@
+@import '../../style/_var.scss';
+
+.cv-section {
+    display: flex;
+    flex-direction: column;
+
+    width: 800px;
+    height: auto;
+    padding: 20px 30px 20px 30px;
+    margin: 30px auto 20px auto;
+    color: $cardTitleColor;
+    font-family: $fontContent;
+
+    @include tablet {
+        width: 90%;
+        margin: 30px auto 20px auto;
+    }
+
+    @include smallTablet {
+        width: 90%;
+        padding: 20px 0px 20px 0px;
+        margin: 30px auto 20px auto;
+    }
+
+    @include mobile {
+        width: 90%;
+        margin: 30px auto 20px auto;
+    }
+
+    .cv-content {
+
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-row-gap: 20px;
+        grid-column-gap: 10px;
+
+        border-radius: $pageBorderRadius;
+        border: 1px solid $headerBackColor;
+
+        padding: 20px 15px 30px 30px;
+        margin-bottom: 40px;
+
+        @include tablet {
+            width: 100%;
+            display: block;
+            padding: 20px 10px 30px 25px;
+            margin: 0 auto 40px auto;
+        }
+
+        @include smallTablet {
+            width: 100%;
+            display: block;
+            padding: 20px 10px 30px 25px;
+            margin: 0 auto 40px auto;
+        }
+
+        @include mobile {
+            display: block;
+            width: 96%;
+            padding: 20px 10px 30px 25px;
+            margin: 10px auto 40px auto;
+        }
+        
+        h3 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: center;
+
+            @include tablet {
+                margin-bottom: 10px;
+            }
+            
+            @include smallTablet {
+                margin-bottom: 10px;
+            }
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .date {
+            text-align: left;
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+
+        .content {
+            
+            text-align: justify;
+            font-size: 1.1em;
+            font-family: $fontContent;
+            margin-bottom: 5px;
+
+            @include tablet {
+                margin-bottom: 20px;
+            }
+            
+            @include smallTablet {
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                margin-bottom: 20px;
+            }
+
+        }
+
+        
+
+    }
+
+    .cv-other {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+
+        border-radius: $pageBorderRadius;
+        border: 1px solid $headerBackColor;
+
+        text-align: center;
+        padding: 30px 30px 30px 30px;
+
+        height: 220px;
+
+        @include tablet {
+            width: 96%;
+            margin: 30px auto 20px auto;
+        }
+
+        @include smallTablet {
+            width: 100%;
+            grid-row-gap: 10px;
+            padding: 20px 10px 30px 20px;
+            margin: 0 auto 40px auto;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-row-gap: 40px;
+            width: 96%;
+            height: 350px;
+            padding: 20px 10px 30px 20px;
+            margin: 10px auto 40px auto;
+            grid-column-gap: 2px;
+        }
+
+        h4 {
+            margin: 0px auto 30px auto;
+
+            @include mobile {
+                margin: 0px auto 10px auto;
+            }
+        }
+
+    }
+}
+
