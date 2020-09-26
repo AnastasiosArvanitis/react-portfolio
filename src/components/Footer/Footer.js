@@ -20,6 +20,14 @@ const useStyles = makeStyles({
         "&:hover": {
             color: "#2a41eb",
             borderColor: "#2a41eb"
+        },
+        "&:visited": {
+            color: "#e6e6e6",
+            borderColor: "#e6e6e6"
+        },
+        "&:active": {
+            color: "#e6e6e6",
+            borderColor: "#e6e6e6"
         }
     }
 });
