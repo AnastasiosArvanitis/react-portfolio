@@ -59,7 +59,7 @@ const classes = useStyles();
                 <SocialLink
                 className={classes.socialStyles}
                 brand={'GithubCircle'}
-                href={'https://github.com/AnastasiosArvanitis/reactSite'}
+                href={'https://github.com/AnastasiosArvanitis/react-portfolio'}
                 />
             </SocialProvider>
             </p>
