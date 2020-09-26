@@ -1,31 +1,27 @@
-@import '../../style/_var.scss';
+@import "../../style/_var.scss";
 
 .contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 600px;
+  padding: 20px 30px 20px 30px;
+  margin: 60px auto 140px auto;
+
+  border-radius: $pageBorderRadius;
+
+  color: $cardTitleColor;
+  font-family: $fontContent;
+
+  .contact-form {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 100%;
-    height: 600px;
-    padding: 20px 30px 20px 30px;
-    margin: 60px auto 140px auto;
-
-    border-radius: $pageBorderRadius;
-    
-    color: $cardTitleColor;
-    font-family: $fontContent;
-
-    .contact-form {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid $headerBackColor;
-
-    }
-
-    
-
+    border: 1px solid $headerBackColor;
+  }
 }
