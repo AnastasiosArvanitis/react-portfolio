@@ -30,8 +30,8 @@ app.post("/send", (req, res) => {
     port: process.env.MAIL_PORT,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: process.env.MAIL_USER, // generated ethereal user
-      pass: process.env.MAIL_PASS, // generated ethereal password#~.EhenZKjsw
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS,
     },
     tls: {
       rejectUnauthorized: false,
@@ -39,10 +39,10 @@ app.post("/send", (req, res) => {
   });
 
   let mailOptions = {
-    from: '"Contact Form" <contact@anastasios-arvanitis.info>', // sender address
-    to: "contact@anastasios-arvanitis.info", // list of receivers
-    subject: "Contact Form Email", // Subject lin
-    html: output, // html body
+    from: '"Contact Form" <contact@anastasios-arvanitis.info>',
+    to: "contact@anastasios-arvanitis.info",
+    subject: "Contact Form Email",
+    html: output,
   };
 
   // send mail with defined transport object
@@ -55,7 +55,5 @@ app.post("/send", (req, res) => {
     /*console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));*/
   });
 });
-
-/* res.render('/Contact'); */
 
 app.listen(PORT, () => console.log(`Server started at port... ${PORT}`));
