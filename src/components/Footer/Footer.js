@@ -1,81 +1,82 @@
-import React from 'react';
+import React from "react";
 
 import {
-    SocialProvider,
-    SocialLink,
-  } from '@mui-treasury/components/socialLink';
-  import { useRoundSocialLinkStyles } from '@mui-treasury/styles/socialLink/round';
+  SocialProvider,
+  SocialLink,
+} from "@mui-treasury/components/socialLink";
+import { useRoundSocialLinkStyles } from "@mui-treasury/styles/socialLink/round";
 
-import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
+import Icon from "@material-ui/core/Icon";
+import { makeStyles } from "@material-ui/core/styles";
 
-import './Footer.scss';
+import "./Footer.scss";
 
 const useStyles = makeStyles({
-    socialStyles: {
-        fontSize: "1rem",
-        marginRight: 15,
-        color: "#e6e6e6",
-        borderColor: "#e6e6e6",
-        "&:hover": {
-            color: "#2a41eb",
-            borderColor: "#2a41eb"
-        },
-        "&:visited": {
-            color: "#e6e6e6",
-            borderColor: "#e6e6e6"
-        },
-        "&:active": {
-            color: "#e6e6e6",
-            borderColor: "#e6e6e6"
-        }
-    }
+  socialStyles: {
+    fontSize: "1rem",
+    marginRight: 15,
+    color: "#e6e6e6",
+    borderColor: "#e6e6e6",
+    "&:hover": {
+      color: "#2a41eb",
+      borderColor: "#2a41eb",
+    },
+    "&:visited": {
+      color: "#e6e6e6",
+      borderColor: "#e6e6e6",
+    },
+    "&:active": {
+      color: "#e6e6e6",
+      borderColor: "#e6e6e6",
+    },
+  },
 });
 
 const Footer = () => {
-let width = document.body.clientWidth;
-let height = document.body.clientHeight;
+  let width = document.body.clientWidth;
+  let height = document.body.clientHeight;
 
-const copyRightStyles = {
-    fontSize: '1em',
-    paddingTop: '2px'
-}
+  const copyRightStyles = {
+    fontSize: "1em",
+    paddingTop: "2px",
+  };
 
-const classes = useStyles();
+  const classes = useStyles();
 
-/* const socialStyles = {
-    fontSize: '30px'
-} */
+  /* const socialStyles = {
+        fontSize: '30px'
+    } */
 
-    return (
-        <footer>
-            {/* <p>{`w: ${width} h: ${height}`}</p> */}
-            
-            <p>Anastasios Arvanitis <Icon style={copyRightStyles} >  copyright</Icon> 2020</p>
-            <p>
-            <SocialProvider useStyles={useRoundSocialLinkStyles}>
-                <SocialLink
-                className={classes.socialStyles}
-                brand={'FacebookCircle'}
-                href={'https://www.facebook.com/329099994318459'}
-                />
-                <SocialLink
-                className={classes.socialStyles}
-                brand={'LinkedIn'}
-                href={'https://www.linkedin.com/in/anastasiosarvanitis'}
-                />
-                <SocialLink
-                className={classes.socialStyles}
-                brand={'GithubCircle'}
-                href={'https://github.com/AnastasiosArvanitis/react-portfolio'}
-                />
-            </SocialProvider>
-            </p>
-        </footer>
-        
-           
-    );
-}
+  return (
+    <footer>
+      {/* <p>{`w: ${width} h: ${height}`}</p> */}
+
+      <p>
+        Anastasios Arvanitis
+        <Icon style={copyRightStyles}> copyright</Icon> 2020
+      </p>
+      <p>
+        <SocialProvider useStyles={useRoundSocialLinkStyles}>
+          <SocialLink
+            className={classes.socialStyles}
+            brand={"FacebookCircle"}
+            href={"https://www.facebook.com/329099994318459"}
+          />
+          <SocialLink
+            className={classes.socialStyles}
+            brand={"LinkedIn"}
+            href={"https://www.linkedin.com/in/anastasiosarvanitis"}
+          />
+          <SocialLink
+            className={classes.socialStyles}
+            brand={"GithubCircle"}
+            href={"https://github.com/AnastasiosArvanitis/react-portfolio"}
+          />
+        </SocialProvider>
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;
 
@@ -87,6 +88,6 @@ export default Footer;
                 <LinkedInIcon className='media-icons' style={socialStyles} />
             </Link>
                     <span className='f-seperator'></span>
-            <Link to={{ pathname: "https://github.com/AnastasiosArvanitis/reactSite" }} target="_blank" > 
+            <Link to={{ pathname: "https://github.com/AnastasiosArvanitis/reactSite" }} target="_blank" >
                 <GitHubIcon className='media-icons' style={socialStyles} />
             </Link> */
