@@ -1,10 +1,14 @@
 const express = require("express");
+var cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
 
 const app = express();
 const PORT = 3000;
 
+dotenv.config();
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -22,12 +26,12 @@ app.post("/send", (req, res) => {
     `;
 
   let transporter = nodemailer.createTransport({
-    host: "mail.anastasios-arvanitis.info",
-    port: 2525,
-    secure: false, // true for 465, false for other ports
+    host: process.env.MAIL_HOST,
+    port: process.env.MAIL_PORT,
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: "contact@anastasios-arvanitis.info", // generated ethereal user
-      pass: "#~.EhenZKjsw", // generated ethereal password
+      user: process.env.MAIL_USER, // generated ethereal user
+      pass: process.env.MAIL_PASS, // generated ethereal password#~.EhenZKjsw
     },
     tls: {
       rejectUnauthorized: false,
@@ -46,10 +50,12 @@ app.post("/send", (req, res) => {
     if (error) {
       return console.log(error);
     }
-    /* console.log('Message sent: %s', info.messageId);   
-    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
- */
+    console.log("Message sent: %s", info.messageId);
+    res.send("/");
+    /*console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));*/
   });
 });
+
+/* res.render('/Contact'); */
 
 app.listen(PORT, () => console.log(`Server started at port... ${PORT}`));

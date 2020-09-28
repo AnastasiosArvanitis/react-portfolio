@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   Box,
   Button,
@@ -66,6 +67,8 @@ const Contact = () => {
 
   const fadeShadowStyles = useFadedShadowStyles();
 
+  let history = useHistory();
+
   return (
     <section className="contact-section">
       {/* <ThemeProvider theme={theme}> */}
@@ -104,8 +107,9 @@ const Contact = () => {
                   message: values.message,
                 }),
               })
-                .then((res) => {
-                  console.log(res);
+                .then(() => {
+                  alert(`Thank you ${values.name} ${values.lastName}, your email has been sent!` );
+                  history.push('/');
                 })
                 .catch((err) => {
                   console.log(err);
