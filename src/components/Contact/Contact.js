@@ -95,7 +95,7 @@ const Contact = () => {
             })}
             initialValues={initialValues}
             onSubmit={(values, formikHelpers) => {
-              fetch("http://localhost:3000/send", {
+              fetch("https://www.anastasios-arvanitis.info/send", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
@@ -197,28 +197,3 @@ const Contact = () => {
 
 export default Contact;
 
-/* <pre>{JSON.stringify(errors, null, 4)}</pre>
-<pre>{JSON.stringify(values, null, 4)}</pre> */
-
-/*  setTimeout(() => {
-                console.log(values);
-                console.log(formikHelpers);
-                console.log('---------');
-                res();
-              }, 5000); */
-
-/* const onSubmit = (values) => {
-                      console.log(values);
-                      fetch('http://localhost:8000/api/v1/users/login/', {
-                        method: 'POST',
-                        headers: {
-                          'content-type': 'application/json'
-                        },
-                        body: JSON.stringify({ 'email': values.email, 'password': values.password })
-                      }).then(res => {
-                        console.log(res);
-                      }).catch(err => {
-                        console.log(err);
-                      })
-
-                    } */
