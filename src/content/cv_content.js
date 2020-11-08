@@ -1,5 +1,5 @@
 export const cvFormation = [
-        {id:1, date:2021, content: 'Développeur web et web mobile à l\'eni école informatique à partir du 05/10/2020, Titre RNCP Niveau 5.'},
+        {id:1, date:2021, content: 'Développeur web et web mobile à l\'eni école informatique jusqu\'en mai 2020, Titre RNCP Niveau 5.'},
         {id:2, date:2020, content: 'Deux cours au CNAM pour la formation de développeur web, Réseaux et administration web avec Linux/Apache, Bases de données avec PostgreSQL.'},
         {id:3, date:2017, content: 'CAP Cuisine Saint Nazaire'},
         {id:4, date:2000, content: 'Technicien des réseaux informatiques, Titre pro, Grèce.'},
