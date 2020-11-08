@@ -26,11 +26,11 @@ import "./Contact.scss";
 
 const useStyles = makeStyles({
   buttonStyle: {
-    backgroundColor: "#090955",
+    backgroundColor: "#001d4a",
     color: "#e6e6e6",
     textTransform: "none",
     "&:hover": {
-      backgroundColor: "#2a41eb",
+      backgroundColor: "#27476e",
     },
     "&:active": {
       backgroundColor: "#f21d1d",
@@ -40,14 +40,14 @@ const useStyles = makeStyles({
     color: "red",
   },
   contactTitle: {
-    color: "#090955",
+    color: "#001d4a",
     textAlign: "center",
   },
 });
 
 const cardStyles = makeStyles(() => ({
   root: {
-    backgroundColor: "#e6e6e6",
+    backgroundColor: "#f4fae3",
     margin: "auto",
     borderRadius: "70px 30px 70px 30px",
     padding: "20px",
