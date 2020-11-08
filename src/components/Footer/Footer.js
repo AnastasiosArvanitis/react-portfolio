@@ -18,8 +18,10 @@ const useStyles = makeStyles({
     color: "#e6e6e6",
     borderColor: "#e6e6e6",
     "&:hover": {
-      color: "#2a41eb",
-      borderColor: "#2a41eb",
+      cursor: "pointer",
+      transform: "translateY(-5px)",
+      color: "#e6e6e6",
+      borderColor: "#e6e6e6"
     },
     "&:visited": {
       color: "#e6e6e6",
