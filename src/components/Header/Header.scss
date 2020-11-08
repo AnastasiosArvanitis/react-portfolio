@@ -13,7 +13,7 @@ header {
   margin-bottom: auto;
   padding: 15px 20px 5px 15px;
   background-color: $headerBackColor;
-  color: $backColor;
+  color: $headerColor;
 
   .burgerBtn {
     display: none;
@@ -79,18 +79,18 @@ header {
       li {
         display: inline-block;
         font-family: $fontContent;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
       }
 
       a {
-        color: $backColor;
+        color: $headerColor;
         text-decoration: none;
         font-size: 1.2em;
       }
 
       li:hover {
         cursor: pointer;
-        text-shadow: 1px 1px 3px #ffffff;
+        text-shadow: 1px 1px 3px $headerColor;
       }
     }
 
@@ -106,7 +106,7 @@ header {
 }
 
 .link-active {
-  border-bottom: 2px solid $backColor;
+  border-bottom: 2px solid $headerColor;
 }
 
 .drawer-content {
