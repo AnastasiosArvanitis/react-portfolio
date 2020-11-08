@@ -30,7 +30,8 @@ a {
         font-weight: 700;
         align-self: center;
         justify-self: center;
-        z-index: 9;
+        z-index: 999;
+        //text-shadow: 1px 1px 1px $headerBackColor;
 
         @include mobile {
             font-size: 3em;
@@ -43,14 +44,14 @@ a {
         text-align: center;
         font-weight: 700;
         font-size: 1.5em;
-        z-index: 5;
+        //text-shadow: 1px 1px 1px $headerBackColor;
     }
 }
 
 .card-show {
     transition: all .5s ease-in-out;
     opacity: 1;
-    
+    z-index: 99;
 }
 
 .card-hide {
@@ -63,7 +64,7 @@ a {
 }
 
 .card:hover .card-icon {
-    opacity: .3;
+    opacity: .4;
 }
 
 .card-icon {
@@ -71,6 +72,7 @@ a {
     align-self: center;
     justify-self: center;
     text-align: center;
-    opacity: .1;
-    z-index: 1;
+    opacity: .2;
+    z-index: 9;
+    color: $cardIconColor;
 }
