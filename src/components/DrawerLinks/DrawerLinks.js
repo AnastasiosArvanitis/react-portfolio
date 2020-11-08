@@ -13,7 +13,7 @@ import './DrawerLinks.scss';
 
 const useLinksStyles = makeStyles({
     root: {
-      color: '#e6e6e6',
+      color: '#eca400',
       fontFamily: 'Asap',
       fontSize: '100px'
     }

@@ -18,11 +18,12 @@ import "./Header.scss";
 
 const useStyles = makeStyles({
   paperAnchorRight: {
-    backgroundImage: "linear-gradient(rgb(9, 9, 85),  rgb(6, 6, 180))",
+    backgroundImage: "linear-gradient( #001d4a,  #27476e)",
     border: 0,
     padding: "10px 10px 10px 10px",
     width: "200px",
-  },
+    color: "#eca400"
+  }
 });
 
 const Header = () => {
@@ -56,7 +57,7 @@ const Header = () => {
 
   const burgerBtnStyles = {
     fontSize: "50px",
-    color: "#e6e6e6",
+    color: "#eca400",
     "&:hover": {
       color: "#2a41eb",
       borderColor: "#2a41eb",
@@ -65,7 +66,7 @@ const Header = () => {
 
   const closeBtnStyles = {
     fontSize: "40px",
-    color: "#e6e6e6",
+    color: "#eca400",
     "&:hover": {
       color: "#2a41eb",
       borderColor: "#2a41eb",
